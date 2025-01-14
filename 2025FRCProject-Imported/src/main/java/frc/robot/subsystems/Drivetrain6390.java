@@ -414,14 +414,14 @@ feedbackSpeeds.omegaRadiansPerSecond;
     ChassisSpeeds speed = new ChassisSpeeds(xSpeed, ySpeed, thetaSpeed);
     
     SwerveModuleState[] states;
-    if(!isRobotRelative)
-    {
+    // if(!isRobotRelative)
+    // {
     states = kinematics.toSwerveModuleStates(speed);
-    }
-    else
-    {
-    states = kinematics.toSwerveModuleStates(ChassisSpeeds.fromRobotRelativeSpeeds(speed, getRotation2d()));
-    }
+    // }
+    // else
+    // {
+    // states = kinematics.toSwerveModuleStates(ChassisSpeeds.fromRobotRelativeSpeeds(speed, getRotation2d()));
+    // }
     setModuleStates(states);
 
     updateOdometry();
